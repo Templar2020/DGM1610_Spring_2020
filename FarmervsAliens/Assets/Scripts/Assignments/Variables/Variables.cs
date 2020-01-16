@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Variables : MonoBehaviour
 {
-    // Declaration 
-    int cookieBox; 
     
-    
+    public float amount;
+    public float money;
+    public float cost;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-       cookieBox = 20;  
+        Cookies(amount,money, cost);   
     }
 
     // Update is called once per frame
@@ -20,4 +22,14 @@ public class Variables : MonoBehaviour
     {
         
     }
+       
+    void Cookies(float amount, float money, float cost)
+    {
+        float total;
+
+        total = money - cost * amount;
+        
+        Debug.Log(total);
+    }
+
 }
