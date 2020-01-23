@@ -11,10 +11,14 @@ public class Variables : MonoBehaviour
 
 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
-        Cookies(amount,money, cost);   
+        Cookies(amount,money, cost);
+
+        Weather(weatherType,temp);
     }
 
     // Update is called once per frame
@@ -30,6 +34,17 @@ public class Variables : MonoBehaviour
         total = money - cost * amount;
         
         Debug.Log(total);
+    }
+
+    //Declaration
+    public string weatherType = "Cloudy";
+    public int temp; 
+
+
+    void Weather(string condition,int tempAmnt)
+    {
+        print(condition);
+        Debug.Log(tempAmnt);
     }
 
 }
