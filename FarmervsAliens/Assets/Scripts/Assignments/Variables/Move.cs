@@ -9,6 +9,9 @@ public class Move : MonoBehaviour
     public float verticalInput;
     public float horizontalInput;
 
+    public GameObject projectilePrefab;
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,11 @@ public class Move : MonoBehaviour
 
         transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput);
         transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * horizontalInput);
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(projectilePrefab, transform.position , projectilePrefab.transform.rotation);
+        }
 
                         //  ( x, y, z)
     }
