@@ -16,7 +16,7 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //int enemyIndex = Random.Range(0, enemyPrefabs.Length);
+        int enemyIndex = Random.Range(0, enemyPrefabs.Length);
 
         if (Input.GetKeyDown(KeyCode.E))
         {
