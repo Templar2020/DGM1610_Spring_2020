@@ -8,6 +8,7 @@ public class SpawnManager : MonoBehaviour
     public float xSpawnRange;
     public float zSpawnPos;
     public float spawnInterval;
+    public float startDelay;
     public int enemyIndex;
 
 
