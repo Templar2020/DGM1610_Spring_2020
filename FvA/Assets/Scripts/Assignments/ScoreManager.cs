@@ -53,5 +53,9 @@ public class ScoreManager : MonoBehaviour
         
         score += pointsToAdd;         
     }
+
+	public static void SubPoint(int pointsToSub){
+		score -= pointsToSub;
+	}
    
 }
