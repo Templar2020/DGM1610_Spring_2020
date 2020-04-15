@@ -11,7 +11,7 @@ public class ScoreManager : MonoBehaviour
     public static int score;
     public int winScore;
 
-   public Text winText;
+    public Text winText;
 
 	private Text scoreText;  
 
