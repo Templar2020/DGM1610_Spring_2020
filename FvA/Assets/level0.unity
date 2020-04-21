@@ -1544,12 +1544,10 @@ GameObject:
   - component: {fileID: 1807076324}
   - component: {fileID: 1807076323}
   - component: {fileID: 1807076322}
-  - component: {fileID: 1807076328}
   - component: {fileID: 1807076321}
   - component: {fileID: 1807076320}
   - component: {fileID: 1807076319}
   - component: {fileID: 1807076326}
-  - component: {fileID: 1807076327}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1571,6 +1569,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wanderRadius: 50
   wanderTimer: 3
+  target: {fileID: 204113830}
+  speed: 1
+  alertDist: 10
+  attackDist: 1
+  damage: 1
 --- !u!195 &1807076320
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1696,34 +1699,6 @@ MonoBehaviour:
   currentHealth: 0
   spawnPoint: {fileID: 515782114}
   points: 10
---- !u!114 &1807076327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1807076318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eab8a7ef229d6fa40b51cbfcb7f8f47f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  target: {fileID: 204113830}
-  moveSpeed: 5
---- !u!65 &1807076328
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1807076318}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 7, y: 0.54, z: 7}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1938586114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,7 +1733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 368.3, y: 188}
+  m_AnchoredPosition: {x: 349, y: 188}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938586116
